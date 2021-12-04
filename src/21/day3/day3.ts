@@ -1,26 +1,15 @@
 import { loadFile } from "../utils";
 
 const pivotArray = (array: string[]): number[][] => {
-    const pivotTable: number[][] = [];
-    array.forEach((line: string) => {
-        const elements = line.split('').map(bit => +bit);
-
-        elements.forEach((element: number, index: number) => {
-            const currentArray = pivotTable[index] || [];
-
-            pivotTable[index] = [...currentArray, element];
-        });
-    });
-
-    return pivotTable;
+    return [...Array(array[0].length)].map((_, column) => array.map(row => +row[column]));
 }
 
 const getStats = (line: number[]): Record<string, number> => {
     const ones = line.filter(Boolean).length;
     const zeros = line.length - ones;
-    const moreOnes = ones >= zeros;
+    const stat = ones >= zeros ? 1 : 0;
 
-    return { mostCommon: moreOnes ? 1 : 0, leastCommon: moreOnes ? 0 : 1 }
+    return { mostCommon: +stat, leastCommon: +!stat }
 }
 
 export const getPowerConsumption = (input: string): number => {
