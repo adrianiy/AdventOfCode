@@ -1,10 +1,5 @@
 import { loadFile } from "../utils";
 
-interface Winner {
-    board: string[][];
-    number: number;
-}
-
 const getBoards = (boardsRaw: string[]): string[][][] => {
     const boards = [];
     while (boardsRaw.length) {
