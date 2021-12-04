@@ -1,9 +1,7 @@
-import fs from 'fs';
-import path from 'path';
-
+import { loadFile } from "../utils";
 
 export const getIncremental = (input: string): number => {
-    const file = fs.readFileSync(path.join(__dirname, input), 'utf-8').split(/\r?\n/);
+    const  file = loadFile(input);
 
     let increased = 0;
     let prevLine = +file[0];
@@ -19,7 +17,7 @@ export const getIncremental = (input: string): number => {
 }
 
 export const getIncrementalWindow = (input: string): number => {
-    const file = fs.readFileSync(path.join(__dirname, input), 'utf-8').split(/\r?\n/);
+    const  file = loadFile(input);
     const accum = [];
 
     let increased = 0;
@@ -47,10 +45,3 @@ export const getIncrementalWindow = (input: string): number => {
 
     return increased;
 }
-
-
-const increased = getIncremental('./input.txt');
-console.log(increased);
-
-const windowIncrease = getIncrementalWindow('./input.txt')
-console.log(windowIncrease);

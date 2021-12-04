@@ -1,13 +1,20 @@
 import { getIncremental, getIncrementalWindow } from "./day1"
 
 test('day1 test yeah!', () => {
-    const incremental = getIncremental('./test_input.txt');
+    const input = './day1/input_test.txt';
+    const incremental = getIncremental(input);
+    const result = getIncrementalWindow(input);
 
     expect(incremental).toEqual(7);
-})
+    expect(result).toEqual(5)
+});
 
-test('day1 part two tururu', () => {
-    const result = getIncrementalWindow('./test_input.txt');
+test('day1 results yeah!', () => {
+    const input = './day1/input.txt';
+    const incremental = getIncremental(input);
+    const result = getIncrementalWindow(input);
 
-    expect(result).toEqual(5);
-})
+
+    expect(incremental).toBeDefined();
+    expect(result).toBeDefined();
+});
