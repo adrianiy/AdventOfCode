@@ -1,4 +1,4 @@
-import { loadFile } from "../utils";
+import { loadFile } from "src/utils";
 
 export const getIncremental = (input: string): number => {
     const  file = loadFile(input);

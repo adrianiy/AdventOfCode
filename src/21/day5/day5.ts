@@ -1,4 +1,4 @@
-import { loadFile } from "../utils";
+import { loadFile } from "src/utils";
 
 const getDirection = (x: number, x2: number): number => {
     return x > x2 ? -1 : 1;

@@ -1,4 +1,4 @@
-import { loadFile } from '../utils';
+import { loadFile } from 'src/utils';
 
 enum Directions {
     forward = 'forward',

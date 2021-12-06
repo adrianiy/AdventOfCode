@@ -1,4 +1,4 @@
-import { loadFile } from "../utils";
+import { loadFile } from "src/utils";
 
 const pivotArray = (array: string[]): number[][] => {
     return [...Array(array[0].length)].map((_, column) => array.map(row => +row[column]));

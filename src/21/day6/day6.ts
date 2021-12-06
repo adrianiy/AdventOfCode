@@ -1,11 +1,11 @@
-import { loadFile } from "../utils";
+import { loadFile } from "src/utils";
 
 const LIFESPAN = 9;
 
 const getChilds = (fishes: number[], days: number): number => {
     const fishesPerCycle = [...Array(LIFESPAN)].map((_, i) => fishes.filter(fish => fish === i).length);
     for (let i = 0; i < days; i++) {
-        const doneFishes = fishesPerCycle.shift();
+        const doneFishes = fishesPerCycle.shift() || 0;
         fishesPerCycle.push(doneFishes);
         fishesPerCycle[6] += doneFishes;
     }

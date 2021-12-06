@@ -1,4 +1,4 @@
-import { loadFile } from "../utils";
+import { loadFile } from "src/utils";
 
 const getBoards = (boardsRaw: string[]): string[][][] => {
     const boards = [];
