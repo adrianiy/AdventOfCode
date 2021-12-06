@@ -1,7 +1,7 @@
 import { parseHydrothermalVents } from './day5';
 
 test('get overlaping lines', () => {
-    const input = './day5/input_test.txt';
+    const input = './21/day5/input_test.txt';
     const result = parseHydrothermalVents(input);
     const resultWithDiagonal = parseHydrothermalVents(input, true);
 
@@ -10,7 +10,7 @@ test('get overlaping lines', () => {
 })
 
 test('get aoc result', () => {
-    const input = './day5/input.txt';
+    const input = './21/day5/input.txt';
     const result = parseHydrothermalVents(input);
     const resultWithDiagonal = parseHydrothermalVents(input, true);
 

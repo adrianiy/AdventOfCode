@@ -1,7 +1,7 @@
 import { getIncremental, getIncrementalWindow } from "./day1"
 
 test('day1 test yeah!', () => {
-    const input = './day1/input_test.txt';
+    const input = './21/day1/input_test.txt';
     const incremental = getIncremental(input);
     const result = getIncrementalWindow(input);
 
@@ -10,7 +10,7 @@ test('day1 test yeah!', () => {
 });
 
 test('day1 results yeah!', () => {
-    const input = './day1/input.txt';
+    const input = './21/day1/input.txt';
     const incremental = getIncremental(input);
     const result = getIncrementalWindow(input);
 

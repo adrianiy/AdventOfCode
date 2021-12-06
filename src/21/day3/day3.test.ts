@@ -1,7 +1,7 @@
 import { getLifeSupport, getPowerConsumption } from './day3';
 
 test('day3 test :smile:', () => {
-    const input = './day3/input_test.txt';
+    const input = './21/day3/input_test.txt';
     const result = getPowerConsumption(input);
     const life = getLifeSupport(input);
 
@@ -10,7 +10,7 @@ test('day3 test :smile:', () => {
 });
 
 test('day3 results', () => {
-    const input = './day3/input.txt';
+    const input = './21/day3/input.txt';
     const power = getPowerConsumption(input);
     const life = getLifeSupport(input);
 

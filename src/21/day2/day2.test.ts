@@ -1,7 +1,7 @@
 import { getPosition, getPositionWithAim } from './day2';
 
 test('day2 test', () => {
-    const input = './day2/input_test.txt';
+    const input = './21/day2/input_test.txt';
     const direction = getPosition(input);
     const directionWithAim = getPositionWithAim(input);
 
@@ -10,7 +10,7 @@ test('day2 test', () => {
 })
 
 test('final result',() => {
-    const input = './day2/input.txt';
+    const input = './21/day2/input.txt';
     const direction = getPosition(input);
     const directionWithAim = getPositionWithAim(input);
 

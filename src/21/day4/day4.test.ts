@@ -1,7 +1,7 @@
 import { bingo, bingoForLosers } from './day4';
 
 test('day4 test bingo!', () => {
-    const input = './day4/input_test.txt';
+    const input = './21/day4/input_test.txt';
     const result = bingo(input);
     const loser = bingoForLosers(input);
 
@@ -10,7 +10,7 @@ test('day4 test bingo!', () => {
 })
 
 test('day3 results', () => {
-    const input = './day4/input.txt';
+    const input = './21/day4/input.txt';
     const result = bingo(input);
     const loser = bingoForLosers(input);
 
