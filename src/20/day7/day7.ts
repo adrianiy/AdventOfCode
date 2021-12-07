@@ -55,7 +55,6 @@ export const countBags = (input: string, bag: string): number => {
 export const countWeightedBags = (input: string, bag: string): number => {
     const rules = loadFile(input).filter(line => line.length);
     const bags = concatWeightedBags(rules);
-    console.log(bags);
 
     return checkInWeightedBags(bag, bags);
 }
