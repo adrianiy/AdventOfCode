@@ -15,7 +15,7 @@ test('exercise results', () => {
     const resultTwo = getValidPasswordsSecond(input);
 
     //console.log(result);
-    console.log(resultTwo);
+    //console.log(resultTwo);
     expect(result).toBeDefined();
     expect(resultTwo).toBeDefined();
 })
