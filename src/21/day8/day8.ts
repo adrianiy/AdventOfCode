@@ -1,16 +1,10 @@
 import { loadFile } from "src/utils"
 
-const DIGITS: Record<number, string[]> = {
-    0: 'abcefg'.split(''),
-    1: 'cf'.split(''),
-    2: 'acdeg'.split(''),
-    3: 'acdfg'.split(''),
-    4: 'bcdf'.split(''),
-    5: 'abdfg'.split(''),
-    6: 'abdefg'.split(''),
-    7: 'acf'.split(''),
-    8: 'abcdefg'.split(''),
-    9: 'abcdfg'.split('')
+const DIGITS: Record<number, number> = {
+    1: 2,
+    4: 4,
+    7: 3,
+    8: 7,
 }
 
 export const findDigits = (input: string, digits: number[]): number => {
@@ -20,7 +14,7 @@ export const findDigits = (input: string, digits: number[]): number => {
 
     return outputs.map(output =>
         output?.reduce((acc, curr) =>
-            acc + +digits.some(d => DIGITS[d].length === curr), 0) || 0
+            acc + +digits.some(d => DIGITS[d] === curr), 0) || 0
     ).reduce((acc, curr) => acc + curr, 0);
 }
 
@@ -33,7 +27,7 @@ export const findOutputs = (input: string): number => {
         const segments: string[] = [...Array(10)];
 
         for (const segment of [1, 4, 7, 8]) {
-            segments[segment] = inputs.find(i => i.length === DIGITS[segment].length)!;
+            segments[segment] = inputs.find(i => i.length === DIGITS[segment])!;
         }
         segments[3] = inputs.find(i => i.length === 5 && segments[7]?.split('').every(l => i.includes(l)))!;
         segments[9] = inputs.find(i => i.length === 6 && segments[4]?.split('').every(l => i.includes(l)))!;
