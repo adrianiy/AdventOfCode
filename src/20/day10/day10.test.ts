@@ -14,7 +14,7 @@ test('get differences results', () => {
     const result = getJoltDifference(input);
     const perms = getAllPermutations(input);
 
-    console.log(result);
-    console.log(perms);
+    //console.log(result);
+    //console.log(perms);
     expect(result).toBeDefined();
 })
