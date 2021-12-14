@@ -3,14 +3,6 @@ import { loadFile } from "src/utils"
 const DIRECTIONS = [-11, -10, -9, -1, 1, 9, 10, 11];
 const DIRECTIONS_ROW_START = [-10, -9, 1, 10, 11];
 const DIRECTIONS_ROW_END = [-11, -10, -1, 9, 10];
-Object.defineProperty(Array.prototype, 'chunk', {
-    value: function(chunkSize: number) {
-        const R = [];
-        for (let i = 0; i < this.length; i += chunkSize)
-            R.push(this.slice(i, i + chunkSize));
-        return R;
-    }
-});
 
 const getDirections = (index: number): number[] => {
     switch (index % 10) {
