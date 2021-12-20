@@ -15,7 +15,7 @@ test('check better shot result', () => {
     const combinations = findShotCombinations(input);
 
     //console.log(shot);
-    console.log(combinations)
+    //console.log(combinations)
     expect(shot).toBeDefined();
     expect(combinations).toBeDefined();
 })
